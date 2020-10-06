@@ -1,13 +1,8 @@
-function greetPeople(people) {
-  var greeting = "He";
-  greeting = greeting + "llo";
-  greeting = greeting + " ";
-
-  people.forEach(function(person) {
-    greeting = greeting + person;
-	console.log(greeting);
-  });
-
+let greetPeople = (people) => {
+  let greeting = "Hello"
+  people.forEach( person => {
+    person === people[people.length-1] ? greeting = `${greeting} ${person}.` : greeting = `${greeting} ${person},`;
+  })
   return greeting;
 }
 
@@ -15,5 +10,7 @@ function greetPeople(people) {
   Let's trace this piece of code - what is the value of result with this input
   
   */
-  var mentors = ['Irina', 'Ashleigh', 'Etza'];
-  var result = greetPeople(mentors)
+  let mentors = ['Irina', 'Ashleigh', 'Etza'];
+  let result = greetPeople(mentors);
+  console.log(result);
+
